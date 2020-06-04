@@ -1,6 +1,6 @@
 package com.google.business.initial;
 
-import com.google.loglistener.LogListener;
+import com.google.listener.LogListener;
 import com.google.pageobgect.initialpage.VisualKeyboard;
 import com.google.webdriver.DriverUtil;
 import io.qameta.allure.Step;
@@ -34,17 +34,17 @@ public class VisualKeyboardUIBL {
                 });
     }
 
-    @Step("Press on the symbol")
+    @Step("Click on the symbol")
     private void pressOnSymbol(char symbol) {
         visualKeyboard.getSymbol(symbol).click();
     }
 
-    @Step("Press on special symbol")
+    @Step("Click on special symbol")
     private void pressOnSymbol(String symbolId) {
         visualKeyboard.getSymbol(symbolId).click();
     }
 
-    @Step("Press close button")
+    @Step("Click on close button")
     public void closeVisualKeyboard() {
         LogListener.logger.info("Close Visual Keyboard");
         new DriverUtil().clickOnElementJS(visualKeyboard.getKeyboardContainerCloseButton());

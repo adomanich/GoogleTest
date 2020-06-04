@@ -1,6 +1,6 @@
 package com.google.pageobgect;
 
-import com.google.loglistener.LogListener;
+import com.google.listener.LogListener;
 import com.google.webdriver.DriverRepository;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;

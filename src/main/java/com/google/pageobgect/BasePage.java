@@ -19,7 +19,7 @@ public class BasePage {
         driver = DriverRepository.DRIVERS.get();
         wait = new WebDriverWait(driver, Duration.ofSeconds(WAIT_VALUE));
         var driverUtil = new DriverUtil();
-        wait.until(webDriver -> driverUtil.isDocumentReady().equals("complete"));
+        wait.until(webDriver -> driverUtil.getDocumentState().equals("complete"));
         PageFactory.initElements(driver, this);
     }
 }

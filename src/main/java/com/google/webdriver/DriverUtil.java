@@ -15,7 +15,7 @@ public class DriverUtil {
         javaScriptExecutor = (JavascriptExecutor) driver;
     }
 
-    public String isDocumentReady() {
+    public String getDocumentState() {
         return (String) javaScriptExecutor.executeScript("return document.readyState");
     }
 

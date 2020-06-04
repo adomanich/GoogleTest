@@ -26,7 +26,7 @@ public class SearchPage extends BasePage {
         return submitButton;
     }
 
-    public List<WebElement> getTransliterationButton() {
+    public List<WebElement> getVisualKeyboardButton() {
         return transliterationButton;
     }
 

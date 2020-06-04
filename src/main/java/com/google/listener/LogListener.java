@@ -1,4 +1,4 @@
-package com.google.loglistener;
+package com.google.listener;
 
 import ch.qos.logback.classic.Logger;
 import ch.qos.logback.classic.LoggerContext;

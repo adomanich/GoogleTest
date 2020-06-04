@@ -24,7 +24,7 @@ public class GoogleSearchTest extends BaseTest {
         String searchRequest = "Ютуб вежа";
         Assert.assertTrue(searchUIBL.isTransliterationButtonDisplayed(), "Error - transliteration button is not displayed");
 
-        VisualKeyboardUIBL visualKeyboardUIBL = searchUIBL.expandTransliteration();
+        VisualKeyboardUIBL visualKeyboardUIBL = searchUIBL.expandVisualKeyboard();
         VisualKeyboardAssertion.baseCheckForVisualKeyboard(visualKeyboardUIBL);
         visualKeyboardUIBL.fillInSearchInputByVisualKeyboard(searchRequest);
         visualKeyboardUIBL.closeVisualKeyboard();

@@ -1,4 +1,4 @@
-package com.google.loglistener;
+package com.google.listener;
 
 import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;

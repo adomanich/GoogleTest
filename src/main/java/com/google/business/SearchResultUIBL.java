@@ -1,7 +1,7 @@
 package com.google.business;
 
 import com.google.business.initial.SearchUIBL;
-import com.google.loglistener.LogListener;
+import com.google.listener.LogListener;
 import com.google.pageobgect.resultpage.SearchResultPage;
 import io.qameta.allure.Step;
 
@@ -45,12 +45,12 @@ public class SearchResultUIBL {
         return !result.get(Boolean.TRUE).isEmpty();
     }
 
-    @Step("Check that list of result displayed displayed after searched with incorrect data")
+    @Step("Check that list of result displayed after searched with incorrect data")
     public boolean isResultListEmpty() {
         return !searchResultPage.getIncorrectSearchResult().isEmpty();
     }
 
-    @Step("Get text from Unsuccess search result")
+    @Step("Get text from unsuccess search result")
     public String getUnSuccessResultText() {
         return searchResultPage.getIncorrectSearchResult().get(0).getText();
     }

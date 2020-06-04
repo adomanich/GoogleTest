@@ -14,36 +14,35 @@ public class SearchUIBL {
         searchPage = new SearchPage();
     }
 
-
     @Step("Fill into search input field")
     public SearchUIBL fillInSearchInput(String searchValue) {
         searchPage.getSearchInputField().sendKeys(searchValue);
         return this;
     }
 
-    @Step("Expand transliteration")
-    public VisualKeyboardUIBL expandTransliteration() {
-        searchPage.getTransliterationButton().get(0).click();
+    @Step("Expand visual keyboard")
+    public VisualKeyboardUIBL expandVisualKeyboard() {
+        searchPage.getVisualKeyboardButton().get(0).click();
         return new VisualKeyboardUIBL();
     }
 
-    @Step("Check that inputed value correct")
+    @Step("Check that input value is correct")
     public boolean isInputFieldValueCorrect(String value) {
         return !searchPage.getInputValue(value).isEmpty();
     }
 
-    @Step("Press Search button")
+    @Step("Click on search button")
     public SearchResultUIBL pressSearchButton() {
         try {
-            new DriverUtil().clickOnElementJS(searchPage.getSubmitButton().get(1));
+            new DriverUtil().clickOnElementJS(searchPage.getSubmitButton().get(0));
         } catch (ElementNotInteractableException ex) {
             new DriverUtil().clickOnElementJS(searchPage.getSubmitButton().get(1));
         }
         return new SearchResultUIBL();
     }
 
-    @Step("Check that translitration button displayed")
+    @Step("Check that visual keyboard button displayed")
     public boolean isTransliterationButtonDisplayed() {
-        return !searchPage.getTransliterationButton().isEmpty();
+        return !searchPage.getVisualKeyboardButton().isEmpty();
     }
 }

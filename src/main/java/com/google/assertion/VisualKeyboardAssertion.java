@@ -10,7 +10,7 @@ public class VisualKeyboardAssertion {
 
     public static void baseCheckForVisualKeyboard(VisualKeyboardUIBL visualKeyboardUIBL) {
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertTrue(visualKeyboardUIBL.isCloseButtonEnabled(), "Error - close button is disabled");
+        softAssert.assertTrue(visualKeyboardUIBL.isCloseButtonEnabled(), "Error - close button disabled");
         softAssert.assertTrue(visualKeyboardUIBL.isVisualKeyboardExpanded(), "Error - visual keyboard is absent");
         softAssert.assertAll();
     }
