@@ -1,6 +1,11 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="GoogleTest" verbose="1">
     <test name="Google search tests">
+        <groups>
+            <run>
+                <include name="regression"/>
+            </run>
+        </groups>
         <packages>
             <package name="com.google.ui.*"/>
         </packages>
