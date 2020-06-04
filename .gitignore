@@ -1,0 +1,7 @@
+.allure/*
+.idea/*
+atframework.iml
+at-framework.iml
+target/*
+libs/*
+allure-results/*
